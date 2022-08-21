@@ -1,0 +1,35 @@
+body {
+  font-family: 'Montserrat', 'Merriweather';
+  background-color: #000000;
+}
+
+.container {
+  height: 100vh;
+  padding: 50px;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  color: #fca311;
+  font-size: 35px;
+}
+
+
+
+.searchbar-section {
+  text-align: center;
+}
+
+.match-list-item {
+  margin: 15px auto;
+  width: 70%;
+  text-align: left;
+}
+
+p {
+  color: white;
+  font-size: 12px;
+}
