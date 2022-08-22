@@ -15,7 +15,7 @@ const searchComments = async getJson => {
   //Get matches to current text input
 
 
-
+//*
 
 
 
@@ -44,6 +44,8 @@ const searchComments = async getJson => {
 
 const outputHtml = matches => {
 
+  matches = matches.filter((match,idx) => idx < 20);
+  console.log(matches);
 
   if (matches.length > 0) {
 
