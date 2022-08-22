@@ -15,7 +15,7 @@ const searchComments = async getJson => {
   //Get matches to current text input
 
 
-//*
+  //*
 
 
 
@@ -24,7 +24,7 @@ const searchComments = async getJson => {
     const regex = new RegExp(`^${getJson}`);
 
     if (getJson.length >= 3) {
-      return jsonElement.body.match(regex) /*|| jsonElement.abbr.match(regex)*/;
+      return jsonElement.name.match(regex);
     } else if (getJson == "") {
       matchList.innerHTML = "";
     }
@@ -35,23 +35,26 @@ const searchComments = async getJson => {
   }
 
   outputHtml(matches);
-
-
-
-
-
 }
+
+
 
 const outputHtml = matches => {
 
-  matches = matches.filter((match,idx) => idx < 20);
-  console.log(matches);
+  matches = matches.filter((match, idx) => idx < 20);
+
 
   if (matches.length > 0) {
 
     const html = matches.map(match => `
         <div class="match-list-item">
-          <p>${match.body} (${match.name} ${match.email})</p>
+          <div class="name">
+            <h2>${match.name}</h2>
+          </div>
+          <div class="text">
+            <p><strong>${match.email}</strong>
+            ${match.body.substring(0, 64)}</p>
+          </div>
         </div>
         `).join('');
 

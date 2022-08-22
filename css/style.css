@@ -24,12 +24,19 @@ body {
 }
 
 .match-list-item {
-  margin: 15px auto;
+  margin: 20px auto;
   width: 70%;
   text-align: left;
 }
 
+h2 {
+  color: gray;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 10px 0px 0px;
+}
+
 p {
   color: white;
-  font-size: 12px;
+  font-size: 10px;
 }
